@@ -86,6 +86,7 @@ export default function CustomizableQuiz({ config = defaultQuizConfig }: { confi
   const [showResult, setShowResult] = useState(false)
   const [lastAnswerCorrect, setLastAnswerCorrect] = useState(false)
   const [showWrongAnswer, setShowWrongAnswer] = useState(false)
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [selectedOption, setSelectedOption] = useState<string | null>(null)
   const [isLoading, setIsLoading] = useState(false)
   const [progress, setProgress] = useState(0)
@@ -133,6 +134,7 @@ export default function CustomizableQuiz({ config = defaultQuizConfig }: { confi
       }, 2000)
       return () => clearTimeout(timer)
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isLoading])
 
   const handleSelection = (value?: string) => {
